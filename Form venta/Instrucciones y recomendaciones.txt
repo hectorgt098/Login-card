@@ -1,0 +1,14 @@
+¡Hola! 
+La cosa es simple, si conoces de html y css básico podrás modificar distintas opciones,
+en general las clases vinculadas con el css se encargan de todo gracias al archivo (style.css).
+
+No olvides vincularlo en tu HTML => <link rel="stylesheet" href="style.css">
+
+Las imágenes incluidas las puedes cambiar o modificar como tu desees, recomiendo dejar los tamaños del logo 
+
+tal y como se encuentra, tan solo cambia la imagen por el logo que tu desees, cambiando esta dirección por el nombre 
+de tu archivo =>  <img src="logo.svg" alt="">
+
+De igual forma puedes modificar el css a tu antojo. Sin embargo, recomiendo que no modifiques tamaños.
+
+¡Eso es todo, gracias por tu compra!

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="load">
+    <h1>Loading</h1>
+    <span></span>
+    </div>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        body{
+            font-family:'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+            color: darkblue;
+        }
+
+        .load{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: desplegar 1s ease-in-out;
+
+        }
+
+        .load span{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            content: '';
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(blue, purple );
+            border-radius: 50px ;
+            position: relative;
+            animation: rotate .5s linear infinite;
+            clip-path: circle(50% at 50% 50%);
+        }
+
+        .load span::after{
+            content: '';
+            width: 90%;
+            height: 90%;
+            background: #fff;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            border-radius: 50px;
+        }
+
+        @keyframes rotate {
+            0%{
+                transform: rotate(0);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes desplegar{
+            0%{
+                transform: translateY(-100vh);
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+    </style>
+</body>
+</html>

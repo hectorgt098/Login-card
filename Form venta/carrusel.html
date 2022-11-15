@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba efecto</title>
+</head>
+<body>
+    <div class="effect">
+        <div id="e1"></div>
+        <div id="e2"></div>
+        <div id="e3"></div>
+        <div id="e4"></div>
+        <div id="e5"></div>
+        <div id="e6"></div>
+        
+    </div>
+    <div class="effect2">
+        <div id="e1"></div>
+        <div id="e2"></div>
+        <div id="e3"></div>
+        <div id="e4"></div>
+        <div id="e5"></div>
+        <div id="e6"></div>
+    </div>
+    <style>
+        body{
+            margin: 0;
+            background: linear-gradient(-90deg, red, purple);
+            height: 100vh;
+        }
+        .effect{
+            content: '';
+            height: 100vh;
+            width: 100vw;
+            background: transparent;
+            position: fixed;
+            z-index: -1;
+            display: flex;
+            justify-content: space-around;
+            max-height:50vh;
+            bottom: 0;
+            animation: canva 8s linear infinite;
+        }
+
+        .effect2{
+            content: '';
+            height: 100vh;
+            width: 100vw;
+            background: transparent;
+            position: fixed;
+            z-index: -1;
+            display: flex;
+            justify-content: space-around;
+            max-height:50vh;
+            bottom: 0;
+            animation: canva 8s linear infinite;
+        }
+    
+        .effect div{
+            margin: 10px;
+            content: '';
+            width: 3em;
+            height: 3em;
+            background: rgba(255, 255, 255, .5);
+            z-index: 2;
+            border-radius: 10px ;
+            top: 0  ;
+            animation: rotacion 5s ease-in-out infinite ;
+        }
+
+        .effect2 div{
+            margin: 10px;
+            content: '';
+            width: 1em;
+            height: 1em;
+            background: rgba(255, 255, 255, .5);
+            z-index: 2;
+            border-radius: 1px ;
+            bottom: 0;
+            animation: rotacion 5s ease-in-out infinite ;
+        }
+
+        #e1{
+            align-self: flex-end;
+        }
+
+        #e2{
+            align-self: flex-start;
+        }
+
+        #e3{
+            transform: translateY(10vh);
+        }
+
+        #e4{
+            align-self: flex-end;
+        }
+        #e5{
+            align-self:center ;
+        }
+        #e6{
+            align-self: flex-end;
+        }
+
+       /*  <!-- animaciones --> */
+
+@keyframes canva{
+    0%{
+        transform: translateY(100%);
+    }
+
+    100%{
+        transform: translateY(-200%);
+    }
+}
+
+@keyframes rotacion{
+    0%{
+        transform: rotate(0);
+    }
+    20%{
+        transform: rotate(80deg);
+    }
+
+    30%{
+        transform: rotate(120deg);
+    }
+
+    70%{
+        transform: rotate(15deg);
+    }
+
+    100%{
+        transform:translateX(0); 
+    }
+
+}
+
+
+
+       /*  <!-- animaciones --> */
+    </style>
+
+
+</body>
+</html>

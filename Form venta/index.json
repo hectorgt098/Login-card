@@ -1,0 +1,49 @@
+db.productos.insert({
+    categoria: "teclado",
+    nombre:"Logitech k230",
+    descripcion:"Teclado inalambrico de membrana perfecto para oficina",
+    precio:70000,
+    provedor:"logitech",
+    creación: new Date()
+}
+
+db.productos.find({precio:{$lt:300000}},{nombre:1,precio:1, _id:0}).sort({precio:1})
+db.productos.find({precio:{$lt:(300000 - 200000)}},{nombre:1,precio:1, _id:0}).sort({precio:1})
+
+renameCollection
+distinct
+delete
+limit
+count
+gt 
+gte
+lt
+lte
+ne
+eq
+
+db.createCollection("Login",{capped:true,max:1,size:200})
+
+db.users.find().forEach(name=>print("Usuario:"+name.name))
+
+db.users.find().sort({name:1}).forEach(name=>print("Usuario:"+name.name)) 
+
+db.Login.insertMany([{"id":1,status:"Active"},{"id":2,status:"Hold"},{"id":3,status:"Pending"}])
+
+var bulk = db.users.initializeUnorderedBulkOp();
+bulk.insert({ code: "P1", Qty: 100, status: "Active"});
+bulk.insert({ code: "P2", Qty: 200, status: "Active"});
+bulk.insert({ code: "P3", Qty: 0, status: "Dective"});
+bulk.execute();
+
+db.users.insert({
+    name:"Julian Chaves",
+    edad:26,
+    documento:1117693698,
+    cargo:"Ingeniero de Garantias",
+    celular: 3156742341,
+    email:"jchaves@equitel.com.co",
+    creacion: new Date(),
+    nacionalidad: "colombia",
+    genero: "Masculino"
+})
